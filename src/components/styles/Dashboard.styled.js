@@ -7,6 +7,11 @@ span{
     padding: 10px
 }
 
+.image{
+    max-width: 20px;
+    border-radius: 50%;
+}
+
 .highlight{
     background-color: #0ff5;
    
