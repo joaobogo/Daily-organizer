@@ -38,11 +38,11 @@ function Task({ data }) {
     }
 
     function handledelete() {
-deletetask(setTasks, data.id)
+        deletetask(setTasks, data.id)
     }
 
     return (
-        <div className={className} draggable='true' onDragStart={handledrag} onDragEnd={() => handledragend(setTasks, draggingId, draggingStage, setClassname)}>
+        <div className={className} draggable='true' onDragStart={handledrag} onDragEnd={() => handledragend(setTasks, draggingId, draggingStage, setClassname, setDraggingId)}>
             {isediting ? (<div>
                 <input value={input} onChange={handlechange} type="text" />
                 <select value={select} onChange={handleselect}>

@@ -4,7 +4,7 @@ import Task from './Task'
 
 function Stage({ title, color }) {
     const [newtask, setNewtask] = useState('')
-    const { tasks, setTasks, setDraggingStage } = useContext(Taskcontext)
+    const { tasks, setTasks, setDraggingStage, draggingId } = useContext(Taskcontext)
 
     function handlefilter(task) {
         return task.stage === title
@@ -37,7 +37,7 @@ function Stage({ title, color }) {
                 <Task key={task.id} data={task} />
             ))}
 
-            <input type='text' value={newtask} onChange={handlechange} />
+            <input type='text' readOnly={draggingId} value={newtask} onChange={handlechange} />
             <button onClick={handleclick}>Create</button>
         </div>
     )

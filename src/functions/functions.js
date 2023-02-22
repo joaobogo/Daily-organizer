@@ -1,10 +1,10 @@
 
 
-export function handledragend(setTasks, draggingId, draggingStage, setClassname) {
+export function handledragend(setTasks, draggingId, draggingStage, setClassname, setDraggingId) {
     setTasks((prevTasks) => {
         var tasks = prevTasks.map((task) => {
             if (task.id === draggingId) {
-                return { id: task.id, name: task.name, stage: draggingStage }
+                return {...task, stage: draggingStage }
             } else {
                 return task
             }
@@ -14,6 +14,7 @@ export function handledragend(setTasks, draggingId, draggingStage, setClassname)
 
     })
     setClassname('task')
+    setDraggingId(0)
 }
 
 export function savedtasks() {
