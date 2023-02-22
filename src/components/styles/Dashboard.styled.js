@@ -7,6 +7,9 @@ span{
     padding: 10px
 }
 
+h1{
+    margin-left:5px;
+}
 .image{
     max-width: 20px;
     border-radius: 50%;

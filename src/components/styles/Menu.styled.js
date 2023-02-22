@@ -7,6 +7,8 @@ height:100vh;
 display:flex;
 flex-direction:column;
 
+
+
 .column {
     display:flex;
     flex-direction:column;
